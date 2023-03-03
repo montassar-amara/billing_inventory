@@ -1,0 +1,20 @@
+<div class="d-flex justify-content-center login-page" >
+    <p-card styleClass="p-card-shadow">
+        <ng-template pTemplate="header">
+            <h1 class="text-center p-2">Login</h1>
+            <hr>
+        </ng-template>
+        <form>
+            <h5>Username</h5>
+            <input type="text" pInputText  [(ngModel)]="username" name="username"  class="w-100 my-3" placeholder="Alex J." />
+            <h5>Password</h5>
+            <input type="password" pInputText  [(ngModel)]="password"  name="password" class="w-100 my-3" placeholder="123..." />
+        </form>
+        <ng-template pTemplate="footer">
+            <hr>
+            <div class="d-flex justify-content-end">
+                <p-button label="LOGIN" icon="pi pi-check" [disabled]="!username || !password" (click)="login()"></p-button>
+            </div>
+        </ng-template>
+    </p-card>
+</div>
